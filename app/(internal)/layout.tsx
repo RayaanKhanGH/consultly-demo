@@ -24,7 +24,6 @@ export default function InternalLayout({ children }: { children: React.ReactNode
         <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-12">
             <Link href="/" className="text-xl font-heading font-black tracking-tighter hover:text-emerald-lime transition-all duration-500 flex items-center gap-2 group">
-              <div className="w-8 h-8 bg-jet-black text-white rounded-lg flex items-center justify-center text-xs group-hover:bg-emerald-lime transition-colors">C.</div>
               Consultly
             </Link>
             
