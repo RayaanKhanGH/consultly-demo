@@ -42,7 +42,7 @@ export default function Home() {
             y: [0, 50, 0],
           }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] bg-emerald-lime/10 rounded-full blur-[120px]"
+          className="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] bg-emerald-lime/10 rounded-full blur-[120px] hidden md:block transform-gpu will-change-transform"
         />
         <motion.div 
           animate={{ 
@@ -51,7 +51,7 @@ export default function Home() {
             y: [0, -40, 0],
           }}
           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] bg-slate-gray/5 rounded-full blur-[100px]"
+          className="absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] bg-slate-gray/5 rounded-full blur-[100px] hidden md:block transform-gpu will-change-transform"
         />
       </div>
 
@@ -118,7 +118,7 @@ export default function Home() {
         <p className="text-[10px] font-black text-slate-gray/40 uppercase tracking-[0.4em] mb-10 sm:mb-14 text-center w-full">Institutional Trust Core</p>
         <div className="flex w-full overflow-hidden group">
           <motion.div 
-            className="flex whitespace-nowrap gap-32 px-16 items-center text-slate-gray/20 font-heading"
+            className="flex whitespace-nowrap gap-32 px-16 items-center text-slate-gray/20 font-heading transform-gpu will-change-transform"
             animate={{ x: ["0%", "-50%"] }}
             transition={{ ease: "linear", duration: 40, repeat: Infinity }}
           >
@@ -156,7 +156,7 @@ export default function Home() {
 
       {/* Institutions Spotlight Section - THE NEW TARGET */}
       <section ref={spotlightRef} className="py-32 sm:py-48 lg:py-64 px-8 bg-soft-gray/50 relative z-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-lime/5 rounded-full blur-[150px] -mr-40 -mt-20"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-lime/5 rounded-full blur-[150px] -mr-40 -mt-20 hidden md:block transform-gpu"></div>
         <div className="max-w-7xl mx-auto">
           <motion.div 
             initial="hidden"
@@ -256,9 +256,9 @@ export default function Home() {
             </div>
 
             <motion.div variants={fadeUp} className="relative group mt-8 lg:mt-0">
-               <div className="absolute -inset-8 bg-emerald-lime/10 rounded-[4rem] blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+               <div className="absolute -inset-8 bg-emerald-lime/10 rounded-[4rem] blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000 hidden md:block transform-gpu"></div>
                <div className="relative aspect-auto sm:aspect-[4/5] bg-jet-black rounded-[3rem] sm:rounded-[4rem] p-10 sm:p-16 overflow-hidden shadow-2xl flex flex-col justify-between">
-                  <div className="absolute top-0 right-0 w-60 sm:w-80 h-60 sm:h-80 bg-emerald-lime/20 rounded-full blur-[100px] sm:blur-[120px] -mr-20 sm:-mr-32 -mt-20 sm:-mt-32"></div>
+                  <div className="absolute top-0 right-0 w-60 sm:w-80 h-60 sm:h-80 bg-emerald-lime/20 rounded-full blur-[100px] sm:blur-[120px] -mr-20 sm:-mr-32 -mt-20 sm:-mt-32 hidden md:block transform-gpu"></div>
                   <div className="space-y-8 sm:space-y-10 relative z-10 pb-12 sm:pb-0">
                     <p className="text-emerald-lime font-black text-[10px] sm:text-[11px] uppercase tracking-[0.4em] flex items-center gap-3">
                        <TrendingUp className="w-4 sm:w-5 h-4 sm:h-5" /> Institutional Pulse
@@ -285,7 +285,7 @@ export default function Home() {
 
       {/* Final CTA Section */}
       <section className="py-32 sm:py-48 lg:py-72 px-8 bg-jet-black text-white text-center relative overflow-hidden z-20">
-        <div className="absolute inset-0 bg-gradient-to-t from-emerald-lime/10 to-transparent opacity-50 z-0 blur-[100px]"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-emerald-lime/10 to-transparent opacity-50 z-0"></div>
         <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center space-y-10 sm:space-y-16">
           <h2 className="text-5xl sm:text-7xl md:text-[8rem] lg:text-[10rem] leading-[0.9] sm:leading-[0.8] font-heading font-black tracking-tighter">Ascend to <br/>the definitive tier.</h2>
           <p className="text-xl sm:text-2xl lg:text-3xl text-slate-gray/60 font-light max-w-3xl leading-relaxed">Scale your institutional authority alongside the world's most verified specialized networks.</p>
