@@ -56,16 +56,16 @@ export default function Home() {
       </div>
 
       {/* Navigation Layer */}
-      <nav className="fixed top-0 w-full z-[100] px-8 py-6 flex justify-between items-center backdrop-blur-md bg-white/70 border-b border-jet-black/5">
-        <Link href="/" className="text-2xl font-heading font-black tracking-tighter text-jet-black hover:opacity-70 transition-opacity">
+      <nav className="fixed top-0 w-full z-[100] px-6 sm:px-8 py-4 sm:py-6 flex justify-between items-center backdrop-blur-md bg-white/70 border-b border-jet-black/5">
+        <Link href="/" className="text-xl sm:text-2xl font-heading font-black tracking-tighter text-jet-black hover:opacity-70 transition-opacity">
           Consultly.
         </Link>
-        <div className="flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.2em]">
-          <Link href="/login" className="hidden sm:block text-slate-gray/60 hover:text-jet-black transition-colors">
+        <div className="flex items-center gap-4 sm:gap-6 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em]">
+          <Link href="/login" className="hidden md:block text-slate-gray/60 hover:text-jet-black transition-colors">
             Access Portal
           </Link>
           <Link href="/login">
-            <Button variant="primary" className="rounded-full px-10 py-3 text-[10px] font-black uppercase tracking-[0.2em] shadow-xl shadow-emerald-lime/20 hover:shadow-emerald-lime/40 transition-all bg-jet-black text-white">
+            <Button variant="secondary" className="rounded-full px-6 sm:px-10 py-2 sm:py-3 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] shadow-lg hover:shadow-xl transition-all">
               Join Network
             </Button>
           </Link>
@@ -95,16 +95,16 @@ export default function Home() {
               Converging the world's premier <span className="text-jet-black font-black">legal</span>, <span className="text-jet-black font-black">financial</span>, and <span className="text-jet-black font-black">strategic</span> authorities into a single direct connective tissue.
             </motion.p>
             
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-              <Link href="/login">
-                <Button variant="primary" className="text-[11px] px-14 py-6 rounded-full w-full sm:w-auto group shadow-2xl shadow-emerald-lime/20 hover:scale-105 transition-all font-black uppercase tracking-[0.2em] bg-jet-black text-white">
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
+              <Link href="/login" className="w-full sm:w-auto">
+                <Button variant="secondary" className="text-[10px] sm:text-[11px] px-10 sm:px-14 py-4 sm:py-6 rounded-full w-full group shadow-lg hover:scale-105 transition-all font-black uppercase tracking-[0.2em]">
                   Join The Intake Channel
                 </Button>
               </Link>
               <Button 
                 onClick={scrollToSpotlight}
                 variant="outline" 
-                className="text-[11px] px-14 py-6 rounded-full w-full sm:w-auto font-black uppercase tracking-[0.2em] border-jet-black/10 hover:bg-jet-black hover:text-white transition-all bg-white text-jet-black"
+                className="text-[10px] sm:text-[11px] px-10 sm:px-14 py-4 sm:py-6 rounded-full w-full sm:w-auto font-black uppercase tracking-[0.2em] border-jet-black/10 hover:bg-jet-black hover:text-white transition-all bg-white text-jet-black"
               >
                 View Institutions <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -114,21 +114,21 @@ export default function Home() {
       </section>
 
       {/* Modern Scrolling Partners Marquee */}
-      <section className="py-16 sm:py-24 border-y border-soft-gray bg-white overflow-hidden flex flex-col items-center relative z-10">
-        <p className="text-[10px] font-black text-slate-gray/40 uppercase tracking-[0.4em] mb-10 sm:mb-14 text-center w-full">Institutional Trust Core</p>
+      <section className="py-12 sm:py-24 border-y border-soft-gray bg-white overflow-hidden flex flex-col items-center relative z-10">
+        <p className="text-[9px] sm:text-[10px] font-black text-slate-gray/40 uppercase tracking-[0.4em] mb-8 sm:mb-14 text-center w-full px-6">Institutional Trust Core</p>
         <div className="flex w-full overflow-hidden group">
           <motion.div 
-            className="flex whitespace-nowrap gap-32 px-16 items-center text-slate-gray/20 font-heading transform-gpu will-change-transform"
+            className="flex whitespace-nowrap gap-16 sm:gap-32 px-8 sm:px-16 items-center text-slate-gray/20 font-heading transform-gpu will-change-transform"
             animate={{ x: ["0%", "-50%"] }}
             transition={{ ease: "linear", duration: 40, repeat: Infinity }}
           >
             {[...Array(2)].map((_, i) => (
               <React.Fragment key={i}>
-                <span className="font-black text-6xl tracking-tighter hover:text-jet-black transition-all duration-700 cursor-default">GOLDMAN</span>
-                <span className="font-black text-6xl tracking-widest hover:text-jet-black transition-all duration-700 cursor-default">AURELIUS</span>
-                <span className="font-serif italic text-6xl hover:text-jet-black transition-all duration-700 cursor-default">Vanguard</span>
-                <span className="font-black text-6xl tracking-tight hover:text-jet-black transition-all duration-700 cursor-default">KPMG</span>
-                <span className="font-black text-6xl tracking-wider hover:text-jet-black transition-all duration-700 cursor-default">SKADDEN</span>
+                <span className="font-black text-4xl sm:text-6xl tracking-tighter hover:text-jet-black transition-all duration-700 cursor-default">GOLDMAN</span>
+                <span className="font-black text-4xl sm:text-6xl tracking-widest hover:text-jet-black transition-all duration-700 cursor-default">AURELIUS</span>
+                <span className="font-serif italic text-4xl sm:text-6xl hover:text-jet-black transition-all duration-700 cursor-default">Vanguard</span>
+                <span className="font-black text-4xl sm:text-6xl tracking-tight hover:text-jet-black transition-all duration-700 cursor-default">KPMG</span>
+                <span className="font-black text-4xl sm:text-6xl tracking-wider hover:text-jet-black transition-all duration-700 cursor-default">SKADDEN</span>
               </React.Fragment>
             ))}
           </motion.div>
@@ -179,33 +179,32 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
                {organizations.slice(0, 6).map((org, i) => (
                  <motion.div 
                     key={org.id} 
                     variants={fadeUp}
-                    className="group relative"
+                    className="group"
                  >
-                    <div className="absolute inset-0 bg-jet-black rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl -z-10 bg-emerald-lime/5"></div>
-                    <div className="h-full bg-white border border-jet-black/5 rounded-[3rem] p-12 transition-all duration-700 hover:-translate-y-4 hover:shadow-2xl hover:border-emerald-lime/20 flex flex-col justify-between">
-                       <div className="space-y-8">
-                          <div className="w-16 h-16 bg-jet-black text-white rounded-2xl flex items-center justify-center font-heading font-black text-2xl shadow-xl group-hover:bg-emerald-lime transition-all duration-700">
+                    <div className="h-full bg-white border border-jet-black/5 rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-12 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:border-emerald-lime/20 flex flex-col justify-between">
+                       <div className="space-y-6 sm:space-y-8">
+                          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-jet-black text-white rounded-xl sm:rounded-2xl flex items-center justify-center font-heading font-black text-xl sm:text-2xl shadow-lg group-hover:bg-emerald-lime transition-all duration-700">
                              {org.initials}
                           </div>
                           <div>
-                             <p className="text-[11px] font-black text-emerald-lime uppercase tracking-[0.3em] mb-3">{org.tier}</p>
-                             <h4 className="text-3xl font-heading font-black text-jet-black tracking-tight">{org.name}</h4>
-                             <p className="text-slate-gray/70 text-base font-light mt-4 leading-relaxed line-clamp-2">
+                             <p className="text-[10px] sm:text-[11px] font-black text-emerald-lime uppercase tracking-[0.3em] mb-2 sm:mb-3">{org.tier}</p>
+                             <h4 className="text-2xl sm:text-3xl font-heading font-black text-jet-black tracking-tight">{org.name}</h4>
+                             <p className="text-slate-gray/70 text-sm sm:text-base font-light mt-4 leading-relaxed line-clamp-2">
                                {org.description}
                              </p>
                           </div>
                        </div>
                        
-                       <div className="pt-10 mt-10 border-t border-soft-gray flex items-center justify-between">
-                          <div className="flex items-center gap-2 text-[10px] font-black text-slate-gray/40 uppercase tracking-widest">
+                       <div className="pt-8 sm:pt-10 mt-8 sm:mt-10 border-t border-soft-gray flex items-center justify-between">
+                          <div className="flex items-center gap-2 text-[9px] sm:text-[10px] font-black text-slate-gray/40 uppercase tracking-widest">
                              <Globe className="w-4 h-4" /> {org.hq}
                           </div>
-                          <Link href="/login" className="text-emerald-lime font-black text-[10px] uppercase tracking-widest group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
+                          <Link href="/login" className="text-emerald-lime font-black text-[9px] sm:text-[10px] uppercase tracking-widest group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
                              Profile <ArrowRight className="w-3.5 h-3.5" />
                           </Link>
                        </div>
@@ -236,19 +235,19 @@ export default function Home() {
                  "Direct connective tissue between institutional authority and enterprise ambition, stripping away 40+ days of intake latency."
               </p>
               
-              <div className="space-y-12 pt-8">
+              <div className="space-y-8 sm:space-y-12 pt-4 sm:pt-8">
                  {[
                    { title: "Rigorous Vetting", desc: "Every partner undergoes an 8-point institutional verification protocol prior to network access.", icon: ShieldCheck },
                    { title: "Strategic Mapping", desc: "Neural matching identifies the precise senior partner for specific cross-border challenges.", icon: Users },
                    { title: "Direct Secure Box", desc: "Initiate AES-256 encrypted, direct channels in under 60 seconds with verified leads.", icon: MessageSquare }
                  ].map((item, i) => (
-                   <motion.div key={i} variants={fadeUp} className="flex gap-8 group">
-                      <div className="w-16 h-16 rounded-[1.5rem] bg-soft-gray flex items-center justify-center flex-shrink-0 group-hover:bg-jet-black group-hover:text-white transition-all duration-700 shadow-sm">
-                         <item.icon className="w-7 h-7" />
+                   <motion.div key={i} variants={fadeUp} className="flex gap-6 sm:gap-8 group">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl sm:rounded-[1.5rem] bg-soft-gray flex items-center justify-center flex-shrink-0 group-hover:bg-jet-black group-hover:text-white transition-all duration-700 shadow-sm">
+                         <item.icon className="w-6 sm:w-7 h-6 sm:h-7" />
                       </div>
                       <div>
-                         <h4 className="text-2xl font-heading font-black text-jet-black mb-2 tracking-tight">{item.title}</h4>
-                         <p className="text-slate-gray/70 text-lg font-light leading-relaxed">{item.desc}</p>
+                         <h4 className="text-xl sm:text-2xl font-heading font-black text-jet-black mb-1 sm:mb-2 tracking-tight">{item.title}</h4>
+                         <p className="text-base sm:text-lg text-slate-gray/70 font-light leading-relaxed">{item.desc}</p>
                       </div>
                    </motion.div>
                  ))}
@@ -289,9 +288,12 @@ export default function Home() {
         <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center space-y-10 sm:space-y-16">
           <h2 className="text-5xl sm:text-7xl md:text-[8rem] lg:text-[10rem] leading-[0.9] sm:leading-[0.8] font-heading font-black tracking-tighter">Ascend to <br/>the definitive tier.</h2>
           <p className="text-xl sm:text-2xl lg:text-3xl text-slate-gray/60 font-light max-w-3xl leading-relaxed">Scale your institutional authority alongside the world's most verified specialized networks.</p>
-          <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-            <Link href="/login">
-              <Button variant="primary" className="text-[12px] px-20 py-7 rounded-full shadow-[0_20px_60px_rgba(0,200,150,0.15)] hover:scale-105 transition-all font-black uppercase tracking-[0.3em] bg-white text-jet-black hover:bg-emerald-lime">
+          <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto mt-8">
+            <Link href="/login" className="w-full sm:w-auto">
+              <Button 
+                variant="outline" 
+                className="text-[10px] sm:text-[11px] px-12 sm:px-20 py-4 sm:py-7 rounded-full transition-all font-black uppercase tracking-[0.3em] bg-white text-jet-black border-transparent hover:bg-emerald-lime hover:text-white shadow-xl"
+              >
                 Join Network Intake
               </Button>
             </Link>
