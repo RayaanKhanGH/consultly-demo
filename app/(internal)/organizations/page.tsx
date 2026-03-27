@@ -27,10 +27,10 @@ export default function OrganizationsPage() {
   return (
     <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-12 max-w-7xl mx-auto">
       {/* Header & Search */}
-      <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-jet-black/5 pb-8">
+      <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 border-b border-jet-black/5 pb-6 sm:pb-8">
         <div>
-          <h1 className="text-3xl font-heading font-black tracking-tight text-jet-black">Institutions</h1>
-          <p className="text-slate-gray text-sm mt-1">Directory of premier global advisory and legal firms.</p>
+          <h1 className="text-2xl sm:text-3xl font-heading font-black tracking-tight text-jet-black">Institutions</h1>
+          <p className="text-slate-gray text-xs sm:text-sm mt-1">Directory of premier global advisory and legal firms.</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
           <div className="relative flex-1 md:w-80">
@@ -92,9 +92,9 @@ export default function OrganizationsPage() {
               </div>
             </div>
             
-            <div className="px-8 pb-8">
+            <div className="px-6 sm:px-8 pb-6 sm:pb-8">
                <Link href={`/organizations/${org.id}`}>
-                 <Button variant="outline" className="w-full py-3 rounded-xl group-hover:bg-jet-black group-hover:text-white group-hover:border-jet-black transition-all font-black text-[10px] uppercase tracking-widest border-soft-gray">
+                 <Button variant="outline" className="w-full py-3 rounded-xl group-hover:bg-jet-black group-hover:text-white group-hover:border-jet-black transition-all font-black text-[9px] sm:text-[10px] uppercase tracking-widest border-soft-gray">
                    View Intelligence Profile <ArrowRight className="w-3.5 h-3.5 ml-2" />
                  </Button>
                </Link>

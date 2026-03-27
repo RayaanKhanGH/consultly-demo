@@ -73,15 +73,14 @@ export default function DashboardPage() {
           
           {/* Create Post Proxy */}
           <motion.div variants={fadeUp}>
-            <HoverAuraCard className="bg-white p-6 rounded-[2rem] border border-jet-black/5 shadow-sm flex gap-5 items-center">
-              <div className="w-12 h-12 rounded-2xl bg-jet-black text-white flex-shrink-0 flex items-center justify-center font-heading font-black text-xs shadow-lg">DC</div>
+            <HoverAuraCard className="bg-white p-5 sm:p-6 rounded-2xl sm:rounded-[2rem] border border-jet-black/5 shadow-sm flex gap-3 sm:gap-5 items-center">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-jet-black text-white flex-shrink-0 flex items-center justify-center font-heading font-black text-[10px] sm:text-xs">DC</div>
               <input 
-                placeholder="Share a strategic institutional update..." 
-                className="flex-1 bg-soft-gray/50 rounded-2xl px-6 py-3.5 text-jet-black text-sm font-medium focus:outline-none focus:ring-4 focus:ring-emerald-lime/5 transition-all placeholder:text-slate-gray/40"
+                placeholder="Share an update..." 
+                className="flex-1 bg-soft-gray/50 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3.5 text-jet-black text-xs sm:text-sm font-medium focus:outline-none focus:ring-4 focus:ring-emerald-lime/5 transition-all placeholder:text-slate-gray/40"
               />
-              <div className="flex gap-3 text-slate-gray/40">
-                <button title="Attach Media" className="p-3 hover:bg-soft-gray hover:text-jet-black rounded-xl transition-all"><ImageIcon className="w-5 h-5" /></button>
-                <button title="Link Resource" className="p-3 hover:bg-soft-gray hover:text-jet-black rounded-xl transition-all"><LinkIcon className="w-5 h-5" /></button>
+              <div className="flex gap-1 sm:gap-3 text-slate-gray/40">
+                <button title="Attach Media" className="p-2 sm:p-3 hover:bg-soft-gray hover:text-jet-black rounded-xl transition-all"><ImageIcon className="w-4 h-4 sm:w-5 sm:h-5" /></button>
               </div>
             </HoverAuraCard>
           </motion.div>
@@ -118,13 +117,13 @@ export default function DashboardPage() {
                   <HoverAuraCard className="bg-white rounded-[2.5rem] border border-jet-black/5 shadow-sm hover:border-emerald-lime/20 transition-all duration-500 overflow-hidden">
                     {/* Post Header */}
                     <div className="p-8 pb-4 flex justify-between items-start">
-                      <div className="flex items-center gap-4">
-                        <Link href={`/organizations/${post.firmId}`} className="w-12 h-12 bg-jet-black text-white rounded-2xl flex items-center justify-center font-heading font-black text-xs hover:bg-emerald-lime transition-all duration-700 shadow-xl group">
+                      <div className="flex items-center gap-3 sm:gap-4">
+                        <Link href={`/organizations/${post.firmId}`} className="w-10 h-10 sm:w-12 sm:h-12 bg-jet-black text-white rounded-xl sm:rounded-2xl flex items-center justify-center font-heading font-black text-[10px] sm:text-xs hover:bg-emerald-lime transition-all duration-700 shadow-xl group">
                           <span className="group-hover:scale-110 transition-transform">{firm?.initials}</span>
                         </Link>
                         <div>
-                          <Link href={`/organizations/${post.firmId}`} className="font-heading font-black text-jet-black hover:text-emerald-lime transition-colors block leading-none text-lg tracking-tight">{firm?.name}</Link>
-                          <p className="text-[10px] font-black text-slate-gray/40 uppercase tracking-[0.2em] flex items-center gap-2 mt-1.5">
+                          <Link href={`/organizations/${post.firmId}`} className="font-heading font-black text-jet-black hover:text-emerald-lime transition-colors block leading-none text-base sm:text-lg tracking-tight">{firm?.name}</Link>
+                          <p className="text-[9px] sm:text-[10px] font-black text-slate-gray/40 uppercase tracking-[0.2em] flex items-center gap-2 mt-1 sm:mt-1.5">
                             {post.timestamp} <span className="w-1 h-1 bg-soft-gray rounded-full"></span> <span className="text-emerald-lime">{post.category}</span>
                           </p>
                         </div>
@@ -169,23 +168,23 @@ export default function DashboardPage() {
                     </div>
 
                     {/* Social Actions */}
-                    <div className="px-8 py-5 border-t border-soft-gray/30 flex items-center justify-between bg-soft-gray/10 group/actions">
-                      <div className="flex items-center gap-10">
+                    <div className="px-5 sm:px-8 py-4 sm:py-5 border-t border-soft-gray/30 flex flex-col sm:flex-row sm:items-center justify-between bg-soft-gray/10 gap-4 group/actions">
+                      <div className="flex items-center gap-5 sm:gap-10 overflow-x-auto no-scrollbar pb-1 sm:pb-0">
                         <button 
                           onClick={() => toggleLike(post.id)}
-                          className={`flex items-center gap-2.5 text-[10px] font-black uppercase tracking-[0.2em] transition-all group ${post.isLiked ? 'text-emerald-lime' : 'text-slate-gray/40 hover:text-jet-black'}`}
+                          className={`flex items-center gap-2 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] transition-all group shrink-0 ${post.isLiked ? 'text-emerald-lime' : 'text-slate-gray/40 hover:text-jet-black'}`}
                         >
-                          <Heart className={`w-5 h-5 group-active:scale-125 transition-all ${post.isLiked ? 'fill-emerald-lime' : ''}`} /> {post.localLikes} Institutional Likes
+                          <Heart className={`w-4 h-4 sm:w-5 sm:h-5 group-active:scale-125 transition-all ${post.isLiked ? 'fill-emerald-lime' : ''}`} /> {post.localLikes} <span className="hidden xs:inline">Insights</span>
                         </button>
-                        <button className="flex items-center gap-2.5 text-slate-gray/40 hover:text-jet-black text-[10px] font-black uppercase tracking-[0.2em] transition-all group">
-                          <MessageSquare className="w-5 h-5 group-hover:fill-current" /> 12 Discussion
+                        <button className="flex items-center gap-2 text-slate-gray/40 hover:text-jet-black text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] transition-all group shrink-0">
+                          <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 group-hover:fill-current" /> 12 Discussion
                         </button>
-                        <button className="flex items-center gap-2.5 text-slate-gray/40 hover:text-jet-black text-[10px] font-black uppercase tracking-[0.2em] transition-all group">
-                          <Share2 className="w-5 h-5 group-hover:fill-current" /> 5 Verified Shares
+                        <button className="flex items-center gap-2 text-slate-gray/40 hover:text-jet-black text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] transition-all group shrink-0">
+                          <Share2 className="w-4 h-4 sm:w-5 sm:h-5 group-hover:fill-current" /> 5 Shares
                         </button>
                       </div>
-                      <Link href={`/organizations/${post.firmId}`} className="text-[10px] font-black text-emerald-lime uppercase tracking-[0.25em] hover:translate-x-2 transition-transform inline-flex items-center gap-3 group/link">
-                         ANALYTICS <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                      <Link href={`/organizations/${post.firmId}`} className="text-[9px] sm:text-[10px] font-black text-emerald-lime uppercase tracking-[0.25em] hover:translate-x-2 transition-transform inline-flex items-center gap-2 sm:gap-3 group/link">
+                         ANALYTICS <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover/link:translate-x-1 transition-transform" />
                       </Link>
                     </div>
                   </HoverAuraCard>

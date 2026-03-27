@@ -31,11 +31,11 @@ export default function NetworkPage() {
   return (
     <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-12 max-w-7xl mx-auto pb-20">
       {/* Header & Search */}
-      <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-soft-gray/30 pb-10">
+      <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-8 border-b border-soft-gray/30 pb-6 sm:pb-10">
         <div className="space-y-1">
-          <h1 className="text-4xl font-heading font-black tracking-tighter text-jet-black leading-none">Authority Directory</h1>
-          <p className="text-slate-gray/70 text-sm font-medium uppercase tracking-widest mt-2 flex items-center gap-2">
-             <ShieldCheck className="w-4 h-4 text-emerald-lime" /> Fully Vetted Institutional Experts
+          <h1 className="text-2xl sm:text-4xl font-heading font-black tracking-tighter text-jet-black leading-none">Authority Directory</h1>
+          <p className="text-slate-gray/70 text-[10px] sm:text-sm font-medium uppercase tracking-widest mt-2 flex items-center gap-2">
+             <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-lime" /> Fully Vetted Institutional Experts
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
@@ -55,17 +55,17 @@ export default function NetworkPage() {
         <div className="lg:col-span-8 space-y-12">
            {/* Recommendation Banner */}
            <motion.div variants={fadeUp}>
-             <HoverAuraCard className="bg-jet-black text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-lime/10 rounded-full blur-[100px] -mr-40 -mt-20 group-hover:bg-emerald-lime/20 transition-all duration-700"></div>
+             <HoverAuraCard className="bg-jet-black text-white p-6 sm:p-10 rounded-[2rem] sm:rounded-[3rem] shadow-2xl relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-lime/10 rounded-full blur-[100px] -mr-40 -mt-20 group-hover:bg-emerald-lime/20 transition-all duration-700 hidden sm:block"></div>
                 <div className="relative z-10">
-                  <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-lime/10 text-emerald-lime rounded text-[10px] font-black uppercase tracking-[0.2em] mb-8 border border-emerald-lime/20 shadow-[0_0_20px_rgba(110,231,183,0.1)]">
-                    <Sparkles className="w-4 h-4 fill-current animate-pulse" /> Synthesis Intelligence Layer
+                  <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 bg-emerald-lime/10 text-emerald-lime rounded text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] mb-6 sm:mb-8 border border-emerald-lime/20 shadow-[0_0_20px_rgba(110,231,183,0.1)]">
+                    <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current animate-pulse" /> Synthesis Intelligence Layer
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-heading font-black tracking-tighter mb-6 leading-[0.9]">Strategic Priority: EMEA Compliance Management</h2>
-                  <p className="text-white/50 text-xl font-light max-w-2xl leading-relaxed italic">
-                    "Identified 3 top-tier specialists with proven history in cross-border liquidity audits for your current institutional profile."
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black tracking-tighter mb-4 sm:mb-6 leading-[1] sm:leading-[0.9]">Strategic Priority: EMEA Compliance Management</h2>
+                  <p className="text-white/50 text-base sm:text-xl font-light max-w-2xl leading-relaxed italic">
+                    "Identified 3 top-tier specialists with proven history in cross-border liquidity audits."
                   </p>
-                  <p className="text-white/20 text-[9px] font-black uppercase tracking-[0.4em] mt-10 border-t border-white/5 pt-6 inline-block">Institutional Data Sync: Active Verified Profile</p>
+                  <p className="text-white/20 text-[8px] sm:text-[9px] font-black uppercase tracking-[0.4em] mt-8 sm:mt-10 border-t border-white/5 pt-5 sm:pt-6 inline-block">Institutional Data Sync: Active</p>
                 </div>
              </HoverAuraCard>
            </motion.div>
@@ -88,18 +88,18 @@ export default function NetworkPage() {
               {filteredConsultants.map((c) => (
                 <motion.div key={c.id} variants={fadeUp} layout initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                   <Link href={`/network/${c.id}`} className="block h-full transition-transform active:scale-[0.98] group">
-                    <HoverAuraCard className="bg-white border border-jet-black/5 rounded-[2.5rem] p-8 h-full flex flex-col justify-between hover:shadow-2xl hover:border-emerald-lime/20 transition-all duration-500">
-                      <div className="flex justify-between items-start mb-8">
-                        <div className="flex gap-5">
+                    <HoverAuraCard className="bg-white border border-jet-black/5 rounded-2xl sm:rounded-[2.5rem] p-6 sm:p-8 h-full flex flex-col justify-between hover:shadow-2xl hover:border-emerald-lime/20 transition-all duration-500">
+                      <div className="flex justify-between items-start mb-6 sm:mb-8">
+                        <div className="flex gap-4 sm:gap-5">
                           <div className="relative">
-                            <div className="w-14 h-14 bg-soft-gray/50 rounded-2xl flex items-center justify-center font-heading font-black text-xl text-jet-black shadow-inner border border-jet-black/5 group-hover:bg-jet-black group-hover:text-white transition-all duration-500">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-soft-gray/50 rounded-xl sm:rounded-2xl flex items-center justify-center font-heading font-black text-lg sm:text-xl text-jet-black shadow-inner border border-jet-black/5 group-hover:bg-jet-black group-hover:text-white transition-all duration-500">
                               {c.name.charAt(0)}{c.name.split(' ').pop()?.charAt(0)}
                             </div>
-                            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-lime border-4 border-white rounded-full shadow-lg shadow-emerald-lime/30 animate-pulse"></div>
+                            <div className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-emerald-lime border-4 border-white rounded-full shadow-lg shadow-emerald-lime/30 animate-pulse"></div>
                           </div>
                           <div>
-                            <h3 className="text-xl font-heading font-black text-jet-black tracking-tight group-hover:text-emerald-lime transition-colors">{c.name}</h3>
-                            <p className="text-[10px] font-black text-slate-gray/50 uppercase tracking-[0.2em] mt-1">{c.role}</p>
+                            <h3 className="text-lg sm:text-xl font-heading font-black text-jet-black tracking-tight group-hover:text-emerald-lime transition-colors leading-tight">{c.name}</h3>
+                            <p className="text-[9px] sm:text-[10px] font-black text-slate-gray/50 uppercase tracking-[0.2em] mt-1">{c.role}</p>
                           </div>
                         </div>
                       </div>
