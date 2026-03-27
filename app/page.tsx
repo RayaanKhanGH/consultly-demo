@@ -86,12 +86,12 @@ export default function Home() {
               Elevated Advisory Network
             </motion.div>
             
-            <motion.h1 variants={fadeUp} className="text-6xl sm:text-8xl md:text-[9rem] lg:text-[11rem] font-heading font-black tracking-tighter text-jet-black mb-12 leading-[0.8] max-w-7xl">
+            <motion.h1 variants={fadeUp} className="text-5xl sm:text-7xl md:text-[9rem] lg:text-[11rem] font-heading font-black tracking-tighter text-jet-black mb-8 sm:mb-12 leading-[0.8] max-w-7xl">
               Clarity in <br/>
               <span className="text-slate-gray/10 italic font-medium">Complexity</span>.
             </motion.h1>
             
-            <motion.p variants={fadeUp} className="text-2xl md:text-4xl text-slate-gray/70 mb-20 max-w-4xl font-body leading-tight font-light">
+            <motion.p variants={fadeUp} className="text-xl sm:text-2xl md:text-4xl text-slate-gray/70 mb-12 sm:mb-20 max-w-4xl font-body leading-tight font-light">
               Converging the world's premier <span className="text-jet-black font-black">legal</span>, <span className="text-jet-black font-black">financial</span>, and <span className="text-jet-black font-black">strategic</span> authorities into a single direct connective tissue.
             </motion.p>
             
@@ -114,8 +114,8 @@ export default function Home() {
       </section>
 
       {/* Modern Scrolling Partners Marquee */}
-      <section className="py-24 border-y border-soft-gray bg-white overflow-hidden flex flex-col items-center relative z-10">
-        <p className="text-[10px] font-black text-slate-gray/40 uppercase tracking-[0.4em] mb-14 text-center w-full">Institutional Trust Core</p>
+      <section className="py-16 sm:py-24 border-y border-soft-gray bg-white overflow-hidden flex flex-col items-center relative z-10">
+        <p className="text-[10px] font-black text-slate-gray/40 uppercase tracking-[0.4em] mb-10 sm:mb-14 text-center w-full">Institutional Trust Core</p>
         <div className="flex w-full overflow-hidden group">
           <motion.div 
             className="flex whitespace-nowrap gap-32 px-16 items-center text-slate-gray/20 font-heading"
@@ -136,18 +136,18 @@ export default function Home() {
       </section>
 
       {/* The Definition / What it is */}
-      <section className="py-64 px-8 bg-white relative z-10">
+      <section className="py-32 sm:py-48 lg:py-64 px-8 bg-white relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="space-y-12"
+            className="space-y-8 sm:space-y-12"
           >
             <motion.p variants={fadeUp} className="text-[11px] font-black text-emerald-lime uppercase tracking-[0.4em]">The Platform Objective</motion.p>
-            <motion.h2 variants={fadeUp} className="text-5xl md:text-7xl font-heading font-black tracking-tighter text-jet-black leading-none">The new paradigm <br/>of institutional access.</motion.h2>
-            <motion.p variants={fadeUp} className="text-2xl md:text-3xl text-slate-gray/70 leading-relaxed font-light md:text-center italic border-l-4 border-emerald-lime/20 pl-10 py-6 bg-soft-gray/30 rounded-r-[3rem]">
+            <motion.h2 variants={fadeUp} className="text-4xl sm:text-5xl md:text-7xl font-heading font-black tracking-tighter text-jet-black leading-none">The new paradigm <br/>of institutional access.</motion.h2>
+            <motion.p variants={fadeUp} className="text-lg sm:text-2xl md:text-3xl text-slate-gray/70 leading-relaxed font-light md:text-center italic border-l-4 border-emerald-lime/20 pl-6 sm:pl-10 py-4 sm:py-6 bg-soft-gray/30 rounded-r-[2rem] sm:rounded-r-[3rem] text-left">
               Consultly operates beyond the limitations of traditional firm directories. It is an exclusive, strictly-vetted professional network engineered to dissolve the barriers between ambitious enterprises and elite strategic talent.
             </motion.p>
           </motion.div>
@@ -155,7 +155,7 @@ export default function Home() {
       </section>
 
       {/* Institutions Spotlight Section - THE NEW TARGET */}
-      <section ref={spotlightRef} className="py-64 px-8 bg-soft-gray/50 relative z-20 overflow-hidden">
+      <section ref={spotlightRef} className="py-32 sm:py-48 lg:py-64 px-8 bg-soft-gray/50 relative z-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-lime/5 rounded-full blur-[150px] -mr-40 -mt-20"></div>
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -163,12 +163,12 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="space-y-24"
+            className="space-y-16 sm:space-y-24"
           >
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
-              <div className="max-w-2xl space-y-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 md:gap-10">
+              <div className="max-w-2xl space-y-4 sm:space-y-6">
                 <p className="text-[11px] font-black text-emerald-lime uppercase tracking-[0.4em]">Partner Ecosystem</p>
-                <h2 className="text-6xl md:text-8xl font-heading font-black tracking-tighter text-jet-black leading-none">Institutions in <br/>the network.</h2>
+                <h2 className="text-5xl sm:text-6xl md:text-8xl font-heading font-black tracking-tighter text-jet-black leading-none">Institutions in <br className="hidden sm:block"/>the network.</h2>
               </div>
               <div className="pb-4">
                  <Link href="/login">
@@ -218,21 +218,21 @@ export default function Home() {
       </section>
 
       {/* Institutional Interconnectivity - The Flow */}
-      <section className="py-64 px-8 bg-white relative z-10">
+      <section className="py-32 sm:py-48 lg:py-64 px-8 bg-white relative z-10">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid lg:grid-cols-2 gap-24 items-center"
+            className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center"
           >
-            <div className="space-y-12">
-              <div className="space-y-6">
+            <div className="space-y-8 sm:space-y-12">
+              <div className="space-y-4 sm:space-y-6">
                 <p className="text-[11px] font-black text-emerald-lime uppercase tracking-[0.4em]">Direct Engagement</p>
-                <h2 className="text-6xl md:text-8xl font-heading font-black tracking-tighter text-jet-black leading-[0.9]">The standard <br/>of access.</h2>
+                <h2 className="text-4xl sm:text-6xl md:text-8xl font-heading font-black tracking-tighter text-jet-black leading-[0.9]">The standard <br className="hidden sm:block"/>of access.</h2>
               </div>
-              <p className="text-2xl text-slate-gray/70 font-light leading-relaxed max-w-xl italic">
+              <p className="text-xl sm:text-2xl text-slate-gray/70 font-light leading-relaxed max-w-xl italic">
                  "Direct connective tissue between institutional authority and enterprise ambition, stripping away 40+ days of intake latency."
               </p>
               
@@ -255,16 +255,16 @@ export default function Home() {
               </div>
             </div>
 
-            <motion.div variants={fadeUp} className="relative group">
+            <motion.div variants={fadeUp} className="relative group mt-8 lg:mt-0">
                <div className="absolute -inset-8 bg-emerald-lime/10 rounded-[4rem] blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-               <div className="relative aspect-[4/5] bg-jet-black rounded-[4rem] p-16 overflow-hidden shadow-2xl flex flex-col justify-between">
-                  <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-lime/20 rounded-full blur-[120px] -mr-32 -mt-32"></div>
-                  <div className="space-y-10 relative z-10">
-                    <p className="text-emerald-lime font-black text-[11px] uppercase tracking-[0.4em] flex items-center gap-3">
-                       <TrendingUp className="w-5 h-5" /> Institutional Pulse
+               <div className="relative aspect-auto sm:aspect-[4/5] bg-jet-black rounded-[3rem] sm:rounded-[4rem] p-10 sm:p-16 overflow-hidden shadow-2xl flex flex-col justify-between">
+                  <div className="absolute top-0 right-0 w-60 sm:w-80 h-60 sm:h-80 bg-emerald-lime/20 rounded-full blur-[100px] sm:blur-[120px] -mr-20 sm:-mr-32 -mt-20 sm:-mt-32"></div>
+                  <div className="space-y-8 sm:space-y-10 relative z-10 pb-12 sm:pb-0">
+                    <p className="text-emerald-lime font-black text-[10px] sm:text-[11px] uppercase tracking-[0.4em] flex items-center gap-3">
+                       <TrendingUp className="w-4 sm:w-5 h-4 sm:h-5" /> Institutional Pulse
                     </p>
-                    <h3 className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tighter leading-[1.1]">"Mapping liquidity across 42 EMEA zones in under 24 hours."</h3>
-                    <p className="text-white/40 text-base font-black uppercase tracking-[0.2em]">— MD, GOLDMAN STRATEGY GROUP</p>
+                    <h3 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white tracking-tighter leading-[1.1]">"Mapping liquidity across 42 EMEA zones in under 24 hours."</h3>
+                    <p className="text-white/40 text-sm sm:text-base font-black uppercase tracking-[0.2em]">— MD, GOLDMAN STRATEGY GROUP</p>
                   </div>
                   
                   <div className="space-y-8 relative z-10 pt-16 border-t border-white/5">
@@ -284,12 +284,12 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-72 px-8 bg-jet-black text-white text-center relative overflow-hidden z-20">
+      <section className="py-32 sm:py-48 lg:py-72 px-8 bg-jet-black text-white text-center relative overflow-hidden z-20">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-lime/10 to-transparent opacity-50 z-0 blur-[100px]"></div>
-        <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center space-y-16">
-          <h2 className="text-7xl md:text-[10rem] leading-[0.8] font-heading font-black tracking-tighter">Ascend to <br/>the definitive tier.</h2>
-          <p className="text-3xl text-slate-gray/60 font-light max-w-3xl leading-relaxed">Scale your institutional authority alongside the world's most verified specialized networks.</p>
-          <div className="flex flex-col sm:flex-row gap-6">
+        <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center space-y-10 sm:space-y-16">
+          <h2 className="text-5xl sm:text-7xl md:text-[8rem] lg:text-[10rem] leading-[0.9] sm:leading-[0.8] font-heading font-black tracking-tighter">Ascend to <br/>the definitive tier.</h2>
+          <p className="text-xl sm:text-2xl lg:text-3xl text-slate-gray/60 font-light max-w-3xl leading-relaxed">Scale your institutional authority alongside the world's most verified specialized networks.</p>
+          <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
             <Link href="/login">
               <Button variant="primary" className="text-[12px] px-20 py-7 rounded-full shadow-[0_20px_60px_rgba(0,200,150,0.15)] hover:scale-105 transition-all font-black uppercase tracking-[0.3em] bg-white text-jet-black hover:bg-emerald-lime">
                 Join Network Intake
@@ -300,8 +300,8 @@ export default function Home() {
       </section>
  
       {/* Footer */}
-      <footer className="py-16 px-8 bg-white relative z-10 border-t border-soft-gray">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+      <footer className="py-12 sm:py-16 px-8 bg-white relative z-10 border-t border-soft-gray">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 text-center md:text-left">
           <div className="text-3xl font-heading font-black tracking-tighter text-jet-black">Consultly.</div>
           <div className="text-slate-gray/40 text-[10px] font-black uppercase tracking-[0.3em] whitespace-nowrap">
             &copy; {new Date().getFullYear()} Consultly. Institutional Access Protocol.
