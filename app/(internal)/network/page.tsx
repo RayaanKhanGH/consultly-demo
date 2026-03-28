@@ -58,12 +58,12 @@ export default function NetworkPage() {
              <HoverAuraCard className="bg-jet-black text-white p-6 sm:p-10 rounded-[2rem] sm:rounded-[3rem] shadow-2xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-lime/10 rounded-full blur-[100px] -mr-40 -mt-20 group-hover:bg-emerald-lime/20 transition-all duration-700 hidden sm:block"></div>
                 <div className="relative z-10">
-                  <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 bg-emerald-lime/10 text-emerald-lime rounded text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] mb-6 sm:mb-8 border border-emerald-lime/20 shadow-[0_0_20px_rgba(110,231,183,0.1)]">
-                    <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current animate-pulse" /> Synthesis Intelligence Layer
+                  <div className="flex flex-wrap items-center gap-2 px-2.5 sm:px-4 py-1.5 bg-emerald-lime/10 text-emerald-lime rounded text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] mb-4 sm:mb-8 border border-emerald-lime/20">
+                    <Sparkles className="w-3 sn:w-4 h-3 sm:h-4 fill-current animate-pulse" /> Synthesis Intelligence
                   </div>
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black tracking-tighter mb-4 sm:mb-6 leading-[1] sm:leading-[0.9]">Strategic Priority: EMEA Compliance Management</h2>
-                  <p className="text-white/50 text-base sm:text-xl font-light max-w-2xl leading-relaxed italic">
-                    "Identified 3 top-tier specialists with proven history in cross-border liquidity audits."
+                  <h2 className="text-2xl sm:text-4xl md:text-5xl font-heading font-black tracking-tighter mb-4 sm:mb-6 leading-tight">Strategic Priority: EMEA Compliance Management</h2>
+                  <p className="text-white/50 text-[15px] sm:text-xl font-light max-w-2xl leading-relaxed italic">
+                    "Identified top-tier specialists for cross-border audits."
                   </p>
                   <p className="text-white/20 text-[8px] sm:text-[9px] font-black uppercase tracking-[0.4em] mt-8 sm:mt-10 border-t border-white/5 pt-5 sm:pt-6 inline-block">Institutional Data Sync: Active</p>
                 </div>
@@ -170,34 +170,34 @@ export default function NetworkPage() {
            </motion.div>
 
            <motion.div variants={fadeUp}>
-             <HoverAuraCard className="bg-white border border-jet-black/5 rounded-[2.5rem] p-8 shadow-sm overflow-hidden relative group">
+             <HoverAuraCard className="bg-white border border-jet-black/5 rounded-2xl sm:rounded-[2.5rem] p-6 sm:p-8 shadow-sm overflow-hidden relative group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-lime/5 rounded-full blur-3xl group-hover:bg-emerald-lime/10 transition-all"></div>
-                <h2 className="text-[10px] font-black text-jet-black mb-8 uppercase tracking-[0.3em] flex items-center gap-3">
-                  <ShieldCheck className="w-5 h-5 text-emerald-lime" /> Risk Profile Index
+                <h2 className="text-[10px] font-black text-jet-black mb-6 sm:mb-8 uppercase tracking-[0.3em] flex items-center gap-3">
+                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-lime" /> Risk Index
                 </h2>
-                <div className="flex items-center gap-6 mb-8">
-                   <div className="text-5xl font-heading font-black text-jet-black tracking-tighter">98.2<span className="text-emerald-lime text-3xl font-light">/100</span></div>
+                <div className="flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
+                   <div className="text-4xl sm:text-5xl font-heading font-black text-jet-black tracking-tighter">98.2<span className="text-emerald-lime text-2xl sm:text-3xl font-light">/100</span></div>
                 </div>
-                <p className="text-[10px] font-bold text-slate-gray/50 uppercase tracking-[0.2em] mb-10 leading-relaxed italic">
-                   System-wide verification protocol active. Last institution sync: 2h ago.
+                <p className="text-[9px] sm:text-[10px] font-bold text-slate-gray/50 uppercase tracking-[0.2em] mb-8 sm:mb-10 leading-relaxed italic">
+                   System-wide protocol active.
                 </p>
-                <Button variant="outline" className="w-full py-4 rounded-2xl border-soft-gray text-[10px] font-black uppercase tracking-[0.3em] hover:bg-jet-black hover:text-white transition-all shadow-sm">
-                   View Full Methodology
+                <Button variant="outline" className="w-full py-3 sm:py-4 rounded-xl sm:rounded-2xl border-soft-gray text-[9px] sm:text-[10px] font-black uppercase tracking-[0.3em] hover:bg-jet-black hover:text-white transition-all shadow-sm">
+                   Full Methodology
                 </Button>
              </HoverAuraCard>
            </motion.div>
 
            <motion.div variants={fadeUp}>
-             <HoverAuraCard className="bg-jet-black text-white p-10 rounded-[2.5rem] shadow-2xl overflow-hidden group">
+             <HoverAuraCard className="bg-jet-black text-white p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] shadow-2xl overflow-hidden group">
                 <div className="absolute inset-0 bg-emerald-lime/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-[80px]"></div>
-                <Sparkles className="w-10 h-10 text-emerald-lime mb-8 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500" />
-                <h3 className="text-2xl font-heading font-black tracking-tight mb-4 flex items-center justify-between">
+                <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-lime mb-6 sm:mb-8 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500" />
+                <h3 className="text-xl sm:text-2xl font-heading font-black tracking-tight mb-4 flex items-center justify-between">
                    Synthesis Upload
-                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                   <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
                 </h3>
-                <p className="text-white/40 text-sm font-light leading-relaxed mb-10 italic">Our AI synthesis engine requires verified project documents to map the ideal expert network.</p>
-                <Button variant="primary" className="w-full py-5 rounded-2xl bg-white text-jet-black font-black text-[10px] uppercase tracking-[0.3em] hover:bg-emerald-lime hover:text-white transition-all shadow-none">
-                   Upload Project Scope 
+                <p className="text-white/40 text-[13px] sm:text-sm font-light leading-relaxed mb-8 sm:mb-10 italic">Upload your project scope.</p>
+                <Button variant="primary" className="w-full py-4 sm:py-5 rounded-xl sm:rounded-2xl bg-white text-jet-black font-black text-[9px] sm:text-[10px] uppercase tracking-[0.3em] hover:bg-emerald-lime hover:text-white transition-all shadow-none">
+                   Start Upload
                 </Button>
              </HoverAuraCard>
            </motion.div>

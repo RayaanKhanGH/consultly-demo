@@ -53,15 +53,15 @@ export default function OrganizationsPage() {
             variants={fadeUp} 
             className="bg-white border border-jet-black/5 rounded-2xl overflow-hidden hover:shadow-xl hover:border-emerald-lime/20 transition-all duration-300 group flex flex-col justify-between"
           >
-            <div className="h-24 bg-soft-gray relative overflow-hidden">
+            <div className="h-20 sm:h-24 bg-soft-gray relative overflow-hidden">
                <div className="absolute inset-0 bg-emerald-lime opacity-5"></div>
                <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent"></div>
-               <div className="absolute -bottom-6 left-6 w-16 h-16 bg-jet-black text-white rounded-xl flex items-center justify-center font-heading font-black text-xl shadow-xl group-hover:bg-emerald-lime transition-colors duration-500">
+               <div className="absolute -bottom-5 sm:-bottom-6 left-5 sm:left-6 w-14 h-14 sm:w-16 sm:h-16 bg-jet-black text-white rounded-xl flex items-center justify-center font-heading font-black text-lg sm:text-xl shadow-xl group-hover:bg-emerald-lime transition-colors duration-500">
                   {org.initials}
                </div>
             </div>
             
-            <div className="p-8 pt-10 flex-1">
+            <div className="p-6 sm:p-8 pt-8 sm:pt-10 flex-1">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-heading font-black text-jet-black group-hover:text-emerald-lime transition-all leading-tight">{org.name}</h3>
                 <div className="flex gap-2">
@@ -71,11 +71,11 @@ export default function OrganizationsPage() {
                 </div>
               </div>
               
-              <div className="flex flex-wrap items-center gap-4 mb-6">
-                <p className="text-[9px] font-black text-slate-gray/70 uppercase tracking-[0.15em] flex items-center gap-1.5">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6">
+                <p className="text-[8.5px] sm:text-[9px] font-black text-slate-gray/70 uppercase tracking-[0.15em] flex items-center gap-1.5">
                   <Globe className="w-3 h-3" /> {org.hq}
                 </p>
-                <p className="text-[9px] font-black text-emerald-lime uppercase tracking-[0.15em] flex items-center gap-1.5">
+                <p className="text-[8.5px] sm:text-[9px] font-black text-emerald-lime uppercase tracking-[0.15em] flex items-center gap-1.5">
                   <TrendingUp className="w-3 h-3" /> {org.domain}
                 </p>
               </div>

@@ -108,10 +108,10 @@ function MessagesContent() {
 
   return (
     <>
-      <div className="h-[calc(100vh-8rem)] bg-white border border-jet-black/10 shadow-sm flex flex-col md:flex-row font-body rounded-md overflow-hidden relative">
+      <div className="h-[calc(100vh-6rem)] sm:h-[calc(100vh-8rem)] bg-white border border-jet-black/10 shadow-sm flex flex-col md:flex-row font-body rounded-md overflow-hidden relative">
         
         {/* Sidebar - Contacts */}
-        <div className="w-full md:w-72 lg:w-80 border-b md:border-b-0 md:border-r border-soft-gray flex flex-col bg-soft-gray/10 max-h-[40vh] md:max-h-none">
+        <div className="w-full md:w-72 lg:w-80 border-b md:border-b-0 md:border-r border-soft-gray flex flex-col bg-soft-gray/10 max-h-[35vh] md:max-h-none shrink-0">
           <div className="p-4 border-b border-soft-gray bg-white">
             <div className="flex justify-between items-center mb-3">
               <h2 className="text-lg font-heading font-bold text-jet-black">Inbox</h2>
@@ -161,18 +161,18 @@ function MessagesContent() {
         {/* Main Chat Area */}
         <div className="flex-1 flex flex-col bg-white overflow-hidden relative">
           
-          <div className="h-14 border-b border-soft-gray px-4 flex items-center justify-between flex-shrink-0 bg-white shadow-sm z-10">
-            <div className="flex items-center gap-3">
-              <h2 className="text-sm md:text-base font-bold text-jet-black">{activeContact.name}</h2>
-              <span className="px-2 py-0.5 bg-soft-gray rounded text-[10px] font-semibold text-slate-gray uppercase hidden sm:inline-block">{activeContact.firm}</span>
-              <span className="w-2 h-2 rounded-full bg-emerald-lime" title="Online"></span>
+          <div className="h-14 border-b border-soft-gray px-3 sm:px-4 flex items-center justify-between flex-shrink-0 bg-white shadow-sm z-10">
+            <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+               <h2 className="text-xs sm:text-sm md:text-base font-bold text-jet-black truncate">{activeContact.name}</h2>
+               <span className="px-1.5 py-0.5 bg-soft-gray rounded text-[9px] font-semibold text-slate-gray uppercase hidden lg:inline-block">{activeContact.firm}</span>
+               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-lime shrink-0" title="Online"></span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-3 text-slate-gray">
-              <button className="hover:text-jet-black p-1"><Phone className="w-4 h-4" /></button>
-              <button className="hover:text-jet-black p-1"><Video className="w-4 h-4" /></button>
-              <div className="w-px h-4 bg-soft-gray mx-1"></div>
-              <button onClick={() => setShowDetails(true)} className="hover:text-jet-black p-1 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider bg-soft-gray/50 hover:bg-soft-gray px-3 py-1.5 rounded-md transition-colors">
-                <Info className="w-3.5 h-3.5" /> <span className="hidden sm:inline-block">Details</span>
+            <div className="flex items-center gap-1 sm:gap-3 text-slate-gray">
+              <button className="hover:text-jet-black p-1.5"><Phone className="w-3.5 h-3.5" /></button>
+              <button className="hover:text-jet-black p-1.5"><Video className="w-3.5 h-3.5" /></button>
+              <div className="w-px h-4 bg-soft-gray mx-0.5 sm:mx-1"></div>
+              <button onClick={() => setShowDetails(true)} className="hover:text-jet-black p-1 flex items-center gap-1 text-[10px] sm:text-xs font-semibold uppercase bg-soft-gray/50 px-2 sm:px-3 py-1.5 rounded-md">
+                <Info className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> <span className="hidden sm:inline">Details</span>
               </button>
             </div>
           </div>
@@ -185,16 +185,16 @@ function MessagesContent() {
             </div>
 
             {activeChats.map((chat) => (
-              <div key={chat.id} className="flex gap-4 group mt-6">
-                <div className={`w-9 h-9 rounded flex-shrink-0 flex items-center justify-center font-bold text-xs mt-1 ${chat.isMe ? 'bg-jet-black text-white' : 'bg-soft-gray text-jet-black'}`}>
+              <div key={chat.id} className="flex gap-2 sm:gap-4 mt-4 sm:mt-6">
+                <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded flex-shrink-0 flex items-center justify-center font-bold text-[10px] sm:text-xs mt-0.5 ${chat.isMe ? 'bg-jet-black text-white' : 'bg-soft-gray text-jet-black'}`}>
                   {chat.sender}
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="font-bold text-sm text-jet-black tracking-tight">{chat.name}</span>
-                    <span className="text-[10px] font-bold text-slate-gray uppercase tracking-wider bg-soft-gray/50 px-2 py-0.5 rounded-sm">{chat.time}</span>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-0.5 sm:mb-1">
+                    <span className="font-bold text-xs sm:text-sm text-jet-black">{chat.name}</span>
+                    <span className="text-[8px] sm:text-[10px] font-bold text-slate-gray uppercase bg-soft-gray/50 px-1.5 py-0.5 rounded-sm">{chat.time}</span>
                   </div>
-                  <p className="text-[15px] text-jet-black leading-relaxed whitespace-pre-wrap">
+                  <p className="text-[13px] sm:text-[15px] text-jet-black leading-relaxed whitespace-pre-wrap">
                     {chat.text}
                   </p>
                 </div>
