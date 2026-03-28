@@ -46,28 +46,28 @@ export default function DashboardPage() {
   return (
     <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-10 max-w-6xl mx-auto">
       {/* Platform Header */}
-      <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-jet-black/5 pb-8">
+      <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-jet-black/5 pb-6 sm:pb-8">
         <div className="space-y-1">
-          <h1 className="text-4xl font-heading font-black tracking-tighter text-jet-black leading-tight">Intelligence Feed</h1>
+          <h1 className="text-2xl sm:text-4xl font-heading font-black tracking-tighter text-jet-black leading-tight">Intelligence Feed</h1>
           <p className="text-slate-gray/50 text-[10px] font-black uppercase tracking-[0.3em] mt-1 flex items-center gap-2">
              <ShieldCheck className="w-3.5 h-3.5 text-emerald-lime" /> Platform Sync: Verified Network Active
           </p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-3 flex-wrap">
           <Link href="/network">
-            <Button variant="outline" className="py-3 px-6 font-black bg-white text-[10px] uppercase tracking-[0.2em] rounded-2xl border-soft-gray hover:border-jet-black transition-all">
+            <Button variant="outline" className="py-2.5 sm:py-3 px-4 sm:px-6 font-black bg-white text-[10px] uppercase tracking-[0.2em] rounded-2xl border-soft-gray hover:border-jet-black transition-all">
               Authority Directory
             </Button>
           </Link>
           <Link href="/messages">
-            <Button variant="primary" className="py-3 px-6 shadow-2xl shadow-emerald-lime/20 font-black text-[10px] uppercase tracking-[0.2em] rounded-2xl bg-jet-black text-white hover:bg-jet-black/95 transition-all">
+            <Button variant="primary" className="py-2.5 sm:py-3 px-4 sm:px-6 shadow-2xl shadow-emerald-lime/20 font-black text-[10px] uppercase tracking-[0.2em] rounded-2xl bg-jet-black text-white hover:bg-jet-black/95 transition-all">
               Secure Box
             </Button>
           </Link>
         </div>
       </motion.div>
 
-      <div className="grid lg:grid-cols-12 gap-10">
+      <div className="grid lg:grid-cols-12 gap-6 lg:gap-10">
         {/* Feed Section */}
         <div className="lg:col-span-8 space-y-6">
           
@@ -116,7 +116,7 @@ export default function DashboardPage() {
                 >
                   <HoverAuraCard className="bg-white rounded-[2.5rem] border border-jet-black/5 shadow-sm hover:border-emerald-lime/20 transition-all duration-500 overflow-hidden">
                     {/* Post Header */}
-                    <div className="p-8 pb-4 flex justify-between items-start">
+                    <div className="p-4 sm:p-8 pb-3 sm:pb-4 flex justify-between items-start">
                       <div className="flex items-center gap-3 sm:gap-4">
                         <Link href={`/organizations/${post.firmId}`} className="w-10 h-10 sm:w-12 sm:h-12 bg-jet-black text-white rounded-xl sm:rounded-2xl flex items-center justify-center font-heading font-black text-[10px] sm:text-xs hover:bg-emerald-lime transition-all duration-700 shadow-xl group">
                           <span className="group-hover:scale-110 transition-transform">{firm?.initials}</span>
@@ -162,9 +162,9 @@ export default function DashboardPage() {
                     </div>
 
                     {/* Post Content */}
-                    <div className="px-8 pb-8 space-y-4">
-                      <h3 className="text-2xl font-heading font-black text-jet-black tracking-tighter leading-[1.1]">{post.title}</h3>
-                      <p className="text-lg text-slate-gray/70 leading-relaxed font-light">{post.content}</p>
+                    <div className="px-4 sm:px-8 pb-4 sm:pb-8 space-y-3 sm:space-y-4">
+                      <h3 className="text-xl sm:text-2xl font-heading font-black text-jet-black tracking-tighter leading-[1.1]">{post.title}</h3>
+                      <p className="text-base sm:text-lg text-slate-gray/70 leading-relaxed font-light">{post.content}</p>
                     </div>
 
                     {/* Social Actions */}
@@ -194,8 +194,8 @@ export default function DashboardPage() {
           </AnimatePresence>
         </div>
 
-        {/* Sidebar Widgets */}
-        <div className="lg:col-span-4 space-y-10">
+        {/* Sidebar Widgets — hidden on mobile */}
+        <div className="hidden lg:block lg:col-span-4 space-y-10">
           <motion.div variants={fadeUp}>
             <HoverAuraCard className="bg-white p-8 rounded-[2.5rem] border border-jet-black/5 shadow-sm">
               <h2 className="text-[11px] font-black text-jet-black mb-10 uppercase tracking-[0.4em] flex items-center gap-3">

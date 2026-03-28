@@ -73,7 +73,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-48 pb-32 px-8 min-h-[90vh] flex flex-col justify-center">
+      <section className="relative pt-28 sm:pt-48 pb-16 sm:pb-32 px-4 sm:px-8 min-h-[90vh] flex flex-col justify-center">
         <div className="max-w-7xl mx-auto w-full">
           <motion.div 
             initial="hidden"
@@ -136,7 +136,7 @@ export default function Home() {
       </section>
 
       {/* The Definition / What it is */}
-      <section className="py-32 sm:py-48 lg:py-64 px-8 bg-white relative z-10">
+      <section className="py-16 sm:py-32 lg:py-48 px-4 sm:px-8 bg-white relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div 
             initial="hidden"
@@ -155,7 +155,7 @@ export default function Home() {
       </section>
 
       {/* Institutions Spotlight Section - THE NEW TARGET */}
-      <section ref={spotlightRef} className="py-32 sm:py-48 lg:py-64 px-8 bg-soft-gray/50 relative z-20 overflow-hidden">
+      <section ref={spotlightRef} className="py-16 sm:py-32 lg:py-48 px-4 sm:px-8 bg-soft-gray/50 relative z-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-lime/5 rounded-full blur-[150px] -mr-40 -mt-20 hidden md:block transform-gpu"></div>
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -217,7 +217,7 @@ export default function Home() {
       </section>
 
       {/* Institutional Interconnectivity - The Flow */}
-      <section className="py-32 sm:py-48 lg:py-64 px-8 bg-white relative z-10">
+      <section className="py-16 sm:py-32 lg:py-48 px-4 sm:px-8 bg-white relative z-10">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             initial="hidden"
@@ -283,10 +283,10 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-32 sm:py-48 lg:py-72 px-8 bg-jet-black text-white text-center relative overflow-hidden z-20">
+      <section className="py-16 sm:py-32 lg:py-48 px-4 sm:px-8 bg-jet-black text-white text-center relative overflow-hidden z-20">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-lime/10 to-transparent opacity-50 z-0"></div>
         <div className="max-w-5xl mx-auto relative z-10 flex flex-col items-center space-y-10 sm:space-y-16">
-          <h2 className="text-5xl sm:text-7xl md:text-[8rem] lg:text-[10rem] leading-[0.9] sm:leading-[0.8] font-heading font-black tracking-tighter">Ascend to <br/>the definitive tier.</h2>
+          <h2 className="text-4xl sm:text-6xl md:text-[7rem] lg:text-[9rem] leading-[0.95] sm:leading-[0.85] font-heading font-black tracking-tighter break-words">Ascend to <br/>the definitive tier.</h2>
           <p className="text-xl sm:text-2xl lg:text-3xl text-slate-gray/60 font-light max-w-3xl leading-relaxed">Scale your institutional authority alongside the world's most verified specialized networks.</p>
           <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto mt-8">
             <Link href="/login" className="w-full sm:w-auto">
@@ -302,7 +302,7 @@ export default function Home() {
       </section>
  
       {/* Footer */}
-      <footer className="py-12 sm:py-16 px-8 bg-white relative z-10 border-t border-soft-gray">
+      <footer className="py-10 sm:py-16 px-4 sm:px-8 bg-white relative z-10 border-t border-soft-gray">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 text-center md:text-left">
           <div className="text-3xl font-heading font-black tracking-tighter text-jet-black">Consultly.</div>
           <div className="text-slate-gray/40 text-[10px] font-black uppercase tracking-[0.3em] whitespace-nowrap">

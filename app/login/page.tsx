@@ -89,7 +89,7 @@ export default function LoginPage() {
       </div>
 
       {/* Right Column - Login Portal */}
-      <div className="relative flex items-center justify-center p-8 bg-soft-gray/30">
+      <div className="relative flex items-center justify-center p-4 sm:p-8 bg-soft-gray/30 min-h-screen lg:min-h-0">
         <AnimatePresence mode="wait">
           {!isLoading ? (
             <motion.div 
@@ -97,7 +97,7 @@ export default function LoginPage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
-              className="w-full max-w-md bg-white p-8 sm:p-12 rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.05)] border border-jet-black/5"
+              className="w-full max-w-md bg-white p-6 sm:p-10 rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.05)] border border-jet-black/5"
             >
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-heading font-black text-jet-black tracking-tight mb-2">Institutional Login</h2>

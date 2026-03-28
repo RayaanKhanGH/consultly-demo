@@ -46,7 +46,7 @@ export default function OrganizationsPage() {
       </motion.div>
 
       {/* Grid - Refined Profile Cards */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {filteredOrgs.length > 0 ? filteredOrgs.map((org) => (
           <motion.div 
             key={org.id} 

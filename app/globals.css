@@ -11,7 +11,34 @@
   --font-body: var(--font-body), sans-serif;
 }
 
-body {
-  background-color: var(--color-white);
-  color: var(--color-jet-black);
+@layer base {
+  html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--color-white);
+    color: var(--color-jet-black);
+    overflow-x: hidden;
+  }
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Prevent 300ms tap delay on touch devices */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+

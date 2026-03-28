@@ -61,7 +61,7 @@ export default function NetworkPage() {
                   <div className="flex flex-wrap items-center gap-2 px-2.5 sm:px-4 py-1.5 bg-emerald-lime/10 text-emerald-lime rounded text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] mb-4 sm:mb-8 border border-emerald-lime/20">
                     <Sparkles className="w-3 sn:w-4 h-3 sm:h-4 fill-current animate-pulse" /> Synthesis Intelligence
                   </div>
-                  <h2 className="text-2xl sm:text-4xl md:text-5xl font-heading font-black tracking-tighter mb-4 sm:mb-6 leading-tight">Strategic Priority: EMEA Compliance Management</h2>
+                  <h2 className="text-xl sm:text-3xl md:text-4xl font-heading font-black tracking-tighter mb-4 sm:mb-6 leading-tight break-words">Strategic Priority: EMEA Compliance Management</h2>
                   <p className="text-white/50 text-[15px] sm:text-xl font-light max-w-2xl leading-relaxed italic">
                     "Identified top-tier specialists for cross-border audits."
                   </p>
@@ -84,7 +84,7 @@ export default function NetworkPage() {
            </div>
 
            {/* Results Grid */}
-           <div className="grid md:grid-cols-2 gap-8">
+           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               {filteredConsultants.map((c) => (
                 <motion.div key={c.id} variants={fadeUp} layout initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                   <Link href={`/network/${c.id}`} className="block h-full transition-transform active:scale-[0.98] group">
@@ -129,8 +129,8 @@ export default function NetworkPage() {
            </div>
         </div>
 
-        {/* Network Intelligence Sidebar */}
-        <div className="lg:col-span-4 space-y-10">
+        {/* Network Intelligence Sidebar — hidden on mobile */}
+        <div className="hidden lg:block lg:col-span-4 space-y-10">
            <motion.div variants={fadeUp}>
              <HoverAuraCard className="bg-white border border-jet-black/5 rounded-[2.5rem] p-8 shadow-sm">
                 <h2 className="text-[10px] font-black text-jet-black mb-8 uppercase tracking-[0.3em] flex items-center gap-3">

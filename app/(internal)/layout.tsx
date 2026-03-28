@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { User, Settings, Shield, LogOut, Info, ChevronDown, CheckCircle2 } from "lucide-react";
+import { User, Shield, LogOut, CheckCircle2 } from "lucide-react";
 
 export default function InternalLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -24,9 +24,9 @@ export default function InternalLayout({ children }: { children: React.ReactNode
     <div className="min-h-screen bg-soft-gray font-body flex flex-col overflow-x-hidden">
       {/* Internal Navigation */}
       <nav className="sticky top-0 w-full bg-white z-[100] border-b border-jet-black/5 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-6 lg:gap-12">
-            <Link href="/" className="text-lg sm:text-x font-heading font-black tracking-tighter hover:text-emerald-lime transition-all duration-500">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
+          <div className="flex items-center gap-4 lg:gap-12">
+            <Link href="/" className="text-base sm:text-lg font-heading font-black tracking-tighter hover:text-emerald-lime transition-all duration-500 shrink-0">
               Consultly
             </Link>
             
@@ -37,7 +37,7 @@ export default function InternalLayout({ children }: { children: React.ReactNode
                   <Link 
                     key={item.name} 
                     href={item.path}
-                    className={`text-[9px] lg:text-[10px] font-black uppercase tracking-[0.2em] transition-all relative pb-5 mt-5 ${isActive ? "text-jet-black" : "text-slate-gray/60 hover:text-jet-black"}`}
+                    className={`text-[9px] lg:text-[10px] font-black uppercase tracking-[0.2em] transition-all relative pb-5 mt-5 whitespace-nowrap ${isActive ? "text-jet-black" : "text-slate-gray/60 hover:text-jet-black"}`}
                   >
                     {item.name}
                     {isActive && (
@@ -52,7 +52,7 @@ export default function InternalLayout({ children }: { children: React.ReactNode
             </div>
           </div>
           
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <div className="relative">
               <button 
                 onClick={() => setIsAccountOpen(!isAccountOpen)}
@@ -108,11 +108,11 @@ export default function InternalLayout({ children }: { children: React.ReactNode
             {/* Mobile Menu Toggle */}
             <button 
               onClick={toggleMobileMenu}
-              className="lg:hidden w-8 h-8 flex flex-col items-center justify-center gap-1.5"
+              className="lg:hidden w-9 h-9 flex flex-col items-center justify-center gap-1.5 rounded-xl hover:bg-soft-gray transition-colors"
             >
-              <div className={`w-5 h-0.5 bg-jet-black transition-all ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}></div>
-              <div className={`w-5 h-0.5 bg-jet-black transition-all ${isMobileMenuOpen ? "opacity-0" : ""}`}></div>
-              <div className={`w-5 h-0.5 bg-jet-black transition-all ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}></div>
+              <div className={`w-5 h-0.5 bg-jet-black transition-all duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}></div>
+              <div className={`w-5 h-0.5 bg-jet-black transition-all duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`}></div>
+              <div className={`w-5 h-0.5 bg-jet-black transition-all duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}></div>
             </button>
           </div>
         </div>
@@ -124,26 +124,31 @@ export default function InternalLayout({ children }: { children: React.ReactNode
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
               className="lg:hidden bg-white border-t border-soft-gray overflow-hidden"
             >
-               <div className="flex flex-col p-6 gap-2">
-                  {navItems.map((item) => (
-                    <Link 
-                      key={item.name} 
-                      href={item.path}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="px-6 py-4 text-[10px] font-black uppercase tracking-[0.3em] text-jet-black hover:bg-soft-gray rounded-2xl transition-all"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
+               <div className="flex flex-col p-3 gap-1">
+                  {navItems.map((item) => {
+                    const isActive = pathname === item.path || (pathname.startsWith(item.path) && item.path !== "/dashboard");
+                    return (
+                      <Link 
+                        key={item.name} 
+                        href={item.path}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`px-5 py-3.5 text-[10px] font-black uppercase tracking-[0.3em] rounded-xl transition-all flex items-center justify-between ${isActive ? "bg-jet-black text-white" : "text-jet-black hover:bg-soft-gray"}`}
+                      >
+                        {item.name}
+                        {isActive && <div className="w-1.5 h-1.5 rounded-full bg-emerald-lime" />}
+                      </Link>
+                    );
+                  })}
                </div>
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
 
-      <main className="flex-1 max-w-7xl mx-auto w-full px-4 md:px-8 py-8 md:py-12 relative">
+      <main className="flex-1 max-w-7xl mx-auto w-full px-3 sm:px-4 md:px-8 py-6 md:py-12 relative">
         {children}
       </main>
     </div>
